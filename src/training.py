@@ -1,7 +1,8 @@
 import numpy as np
 from time import time
 from torch.autograd import Variable
-from src.datasets import triplet_dataloader
+# from src.datasets import triplet_dataloader
+from datasets import triplet_dataloader
 
 def prep_triplets(triplets, cuda):
     """
@@ -10,7 +11,7 @@ def prep_triplets(triplets, cuda):
     """
     a, n, d = (Variable(triplets['anchor']), Variable(triplets['neighbor']), Variable(triplets['distant']))
     if cuda:
-    	a, n, d = (a.cuda(), n.cuda(), d.cuda())
+        a, n, d = (a.cuda(), n.cuda(), d.cuda())
     return (a, n, d)
 
 def train_triplet_epoch(model, cuda, dataloader, optimizer, epoch, margin=1,

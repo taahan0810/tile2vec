@@ -1,6 +1,6 @@
 import os
-import gdal
-import imageio
+# import gdal
+# import imageio
 from time import time
 from collections import Counter
 from sklearn.preprocessing import StandardScaler

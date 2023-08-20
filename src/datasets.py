@@ -4,7 +4,8 @@ import torch
 import glob
 import os
 import numpy as np
-from src.data_utils import clip_and_scale_image
+# from src.data_utils import clip_and_scale_image
+from data_utils import clip_and_scale_image
 
 
 class TileTripletsDataset(Dataset):
